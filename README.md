@@ -3,11 +3,11 @@
 An automated, full-stack data pipeline and interactive dashboard that analyzes live remote job market trends.
 
 ## 🔗 Links
-- **Live Demo:** (https://job-market-pulse-2026.vercel.app/)
+- **Live Demo:** [https://job-market-pulse-2026.vercel.app/](https://job-market-pulse-2026.vercel.app/)
 - **Insight Report:** #1 Trend - Security & Go are outperforming standard Frontend frameworks.
 
 ## 📊 The Project
-This project explores a key question for CS students: *Is the MERN stack still the king of remote work in 2026?* By analyzing live data, I discovered a significant shift toward infrastructure and security over simple feature building.
+This project explores a key question for CS students: *Is the MERN stack still the king of remote work in 2026?* **I developed this automated pipeline to track how the demand for Security and Go is shifting in the 2026 remote landscape.** By analyzing live data rather than static datasets, I discovered a significant shift toward infrastructure and security over simple feature building.
 
 ![Dashboard Preview](dashboard-preview.png)
 
@@ -28,3 +28,10 @@ This project is a **Full-Stack Data Engineering** pipeline:
 ## 🚀 Key Insights
 - **Security** is the #1 in-demand skill in the analyzed remote sector.
 - **Go (Golang)** shows higher growth potential than standard Node.js/Express for high-performance roles.
+
+---
+
+## 👨‍💻 About the Developer
+I am a **B.Tech Computer Science (Data Science)** student at **Kazi Nazrul University**. I am passionate about bridging the gap between data engineering and full-stack web development. This project serves as a showcase of my ability to build end-to-end automated systems and derive actionable insights from live data.
+
+**Seeking Internships in:** Data Science | Web Development | Data Engineering
