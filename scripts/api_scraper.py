@@ -48,7 +48,7 @@ def get_real_jobs():
 
     # 3. Save to CSV
     df = pd.DataFrame(data)
-    filename = "remote_jobs_live.csv"
+    filename = "public/remote_jobs_live.csv"
     df.to_csv(filename, index=False)
     
     print(f"🎉 SUCCESS! Saved {len(data)} jobs to '{filename}'")

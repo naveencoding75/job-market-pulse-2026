@@ -72,7 +72,7 @@ def analyze_market_v2():
     plt.xticks(rotation=45)
     plt.grid(axis='y', linestyle='--', alpha=0.3)
     
-    chart_filename = "market_pulse_chart_v2.png"
+    chart_filename = "public/market_pulse_chart_v2.png"
     plt.savefig(chart_filename, bbox_inches='tight', dpi=300)
     print(f"\n🖼️ Chart saved as '{chart_filename}'")
     
