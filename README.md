@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛡️ Job Market Pulse 2026: The Security Surge
 
-## Getting Started
+An automated, full-stack data pipeline and interactive dashboard that analyzes live remote job market trends.
 
-First, run the development server:
+## 🔗 Links
+- **Live Demo:** (https://job-market-pulse-2026.vercel.app/)
+- **Insight Report:** #1 Trend - Security & Go are outperforming standard Frontend frameworks.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📊 The Project
+This project explores a key question for CS students: *Is the MERN stack still the king of remote work in 2026?* By analyzing live data, I discovered a significant shift toward infrastructure and security over simple feature building.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Dashboard Preview](dashboard-preview.png)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ How It Works (The Pipeline)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is a **Full-Stack Data Engineering** pipeline:
 
-## Learn More
+1. **Data Collection (Python):** A script in `scripts/api_scraper.py` fetches live records from the RemoteOK API.
+2. **Automation (GitHub Actions):** A CI/CD workflow runs the scraper every 24 hours at midnight.
+3. **Data Storage:** The cleaned data is committed back to the repository as `public/remote_jobs_live.csv`.
+4. **The Dashboard (Next.js):** A modern React-based frontend (Tailwind CSS + Recharts) automatically pulls the new CSV and re-renders the insights.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
+- **Languages:** Python (Data Processing), JavaScript (Frontend/API)
+- **Libraries:** Pandas, Requests, React, Recharts, PapaParse
+- **Tools:** GitHub Actions (Automation), Vercel (Deployment)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Key Insights
+- **Security** is the #1 in-demand skill in the analyzed remote sector.
+- **Go (Golang)** shows higher growth potential than standard Node.js/Express for high-performance roles.
