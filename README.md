@@ -9,7 +9,10 @@ An automated, full-stack data pipeline and interactive dashboard that analyzes l
 ## 📊 The Project
 This project explores a key question for CS students: *Is the MERN stack still the king of remote work in 2026?* **I developed this automated pipeline to track how the demand for Security and Go is shifting in the 2026 remote landscape.** By analyzing live data rather than static datasets, I discovered a significant shift toward infrastructure and security over simple feature building.
 
-![Dashboard Preview](dashboard-preview.png)
+<p align="center">
+  <img src="dashboard-1.png" width="48%" />
+  <img src="dashboard-2.png" width="48%" />
+</p>
 
 ## ⚙️ How It Works (The Pipeline)
 
@@ -28,6 +31,12 @@ This project is a **Full-Stack Data Engineering** pipeline:
 ## 🚀 Key Insights
 - **Security** is the #1 in-demand skill in the analyzed remote sector.
 - **Go (Golang)** shows higher growth potential than standard Node.js/Express for high-performance roles.
+
+## 🗺️ Future Roadmap
+As a Data Science student, I plan to evolve this project into a more robust market aggregator:
+* **Multi-Source Aggregation:** Integrating JSearch and LinkedIn APIs.
+* **NLP Classification:** Using Natural Language Processing to categorize job roles based on descriptions.
+* **Historical Tracking:** Migrating to a relational database (MySQL) to store daily snapshots and visualize trends.
 
 ---
 
