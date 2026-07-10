@@ -21,6 +21,8 @@ const TECH_STACK = [
   "excel", "web3", "next.js", "tailwind"
 ];
 
+export const dynamic = 'force-dynamic';
+
 export default function Home() {
   const [chartData, setChartData] = useState([]);
   const [totalJobs, setTotalJobs] = useState(0);
