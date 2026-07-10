@@ -26,21 +26,23 @@ export const dynamic = 'force-dynamic';
 export default function Home() {
   const [chartData, setChartData] = useState([]);
   const [totalJobs, setTotalJobs] = useState(0);
-  const [topSkill, setTopSkill] = useState({ name: "", count: 0 });
+  // FIX 1: Initialize safely with default structural values so it doesn't break during initial render
+  const [topSkill, setTopSkill] = useState({ name: "LOADING...", count: 0 });
+  const [secondSkill, setSecondSkill] = useState({ name: "LOADING...", count: 0 });
 
   useEffect(() => {
-    // 1. Fetch the CSV file from your public folder
     fetch("/remote_jobs_live.csv")
       .then((response) => response.text())
       .then((csvText) => {
-        // 2. Parse CSV to JSON
         Papa.parse(csvText, {
           header: true,
+          skipEmptyLines: true, // Safeguard against trailing blank lines in CSV
           complete: (results) => {
             processJobData(results.data);
           },
         });
-      });
+      })
+      .catch((err) => console.error("Error loading CSV:", err));
   }, []);
 
   const processJobData = (rows) => {
@@ -51,11 +53,9 @@ export default function Home() {
       if (!row.Tags) return;
       
       validJobCount++;
-      // Split tags "python, react" -> ["python", "react"]
       const tags = row.Tags.toLowerCase().split(",").map((t) => t.trim());
 
       tags.forEach((tag) => {
-        // Normalize: 'node.js' -> 'node'
         let cleanTag = tag.includes("node") ? "node" : tag;
 
         if (TECH_STACK.includes(cleanTag)) {
@@ -64,15 +64,21 @@ export default function Home() {
       });
     });
 
-    // Sort and get Top 10
     const sortedSkills = Object.entries(skillCounts)
-      .sort((a, b) => b[1] - a[1]) // Sort highest to lowest
+      .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
       .map(([name, count]) => ({ name: name.toUpperCase(), count }));
 
-    setChartData(sortedSkills);
-    setTotalJobs(validJobCount);
-    setTopSkill(sortedSkills[0] || { name: "N/A", count: 0 });
+    // FIX 2: Correct state updates using array checks
+    if (sortedSkills.length > 0) {
+      setChartData(sortedSkills);
+      setTotalJobs(validJobCount);
+      setTopSkill(sortedSkills[0]); // Primary #1 skill
+      
+      if (sortedSkills[1]) {
+        setSecondSkill(sortedSkills[1]); // Runner up #2 skill
+      }
+    }
   };
 
   return (
@@ -117,8 +123,9 @@ export default function Home() {
             </div>
             <h3 className="text-gray-400 text-sm uppercase tracking-wider">Key Insight</h3>
           </div>
+          {/* FIX 3: Fully dynamic inline text interpolation */}
           <p className="text-lg font-medium text-gray-300">
-            "Security" & "Go" are outperforming standard Frontend frameworks.
+            "{topSkill.name}" & "{secondSkill.name}" are outperforming standard Frontend frameworks.
           </p>
         </div>
       </div>
@@ -126,7 +133,7 @@ export default function Home() {
       {/* MAIN CHART */}
       <div className="max-w-5xl mx-auto bg-gray-900 p-8 rounded-2xl border border-gray-800 shadow-2xl">
         <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-          <Code className="text-blue-500" /> Top 10 In-Demand Technologies
+          <Code className="text-blue-500" /> Top {chartData.length} In-Demand Technologies
         </h2>
         
         <div className="h-[400px] w-full">
