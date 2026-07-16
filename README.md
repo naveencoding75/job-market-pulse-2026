@@ -26,21 +26,35 @@ This project is a **Full-Stack Data Engineering** pipeline:
 ## 🛠️ Tech Stack
 - **Languages:** Python (Data Processing), JavaScript (Frontend/API)
 - **Libraries:** Pandas, Requests, React, Recharts, PapaParse
-- **Tools:** GitHub Actions (Automation), Vercel (Deployment)
+- **Tools:** GitHub Actions (Automation), Vercel (Deployment), Docker (Containerization)
 
-## 🚀 Key Insights
-- **Security** is the #1 in-demand skill in the analyzed remote sector.
-- **Go (Golang)** shows higher growth potential than standard Node.js/Express for high-performance roles.
+## 🐳 Running with Docker
+The entire hybrid environment (Node.js + Python) is containerized for seamless cross-platform deployment. To spin it up locally using Docker:
 
-## 🗺️ Future Roadmap
-As a Data Science student, I plan to evolve this project into a more robust market aggregator:
-* **Multi-Source Aggregation:** Integrating JSearch and LinkedIn APIs.
-* **NLP Classification:** Using Natural Language Processing to categorize job roles based on descriptions.
-* **Historical Tracking:** Migrating to a relational database (MySQL) to store daily snapshots and visualize trends.
+```bash
+# Build the image
+docker build -t job-market-pulse .
 
----
+# Run the container
+docker run -p 3000:3000 job-market-pulse
 
-## 👨‍💻 About the Developer
-I am a **B.Tech Computer Science (Data Science)** student at **Kazi Nazrul University**. I am passionate about bridging the gap between data engineering and full-stack web development. This project serves as a showcase of my ability to build end-to-end automated systems and derive actionable insights from live data.
+Go to localhost:3000 to view the local containerized version.
 
-**Seeking Internships in:** Data Science | Web Development | Data Engineering
+🚀 Key Insights  
+Security is the #1 in-demand skill in the analyzed remote sector.  
+
+Go (Golang) shows higher growth potential than standard Node.js/Express for high-performance roles.  
+
+🗺️ Future Roadmap  
+As a Data Science student, I plan to evolve this project into a more robust market aggregator:  
+
+Multi-Source Aggregation: Integrating JSearch and LinkedIn APIs.  
+
+NLP Classification: Using Natural Language Processing to categorize job roles based on descriptions.  
+
+Historical Tracking: Migrating to a relational database (MySQL) to store daily snapshots and visualize trends.  
+
+👨‍💻 About the Developer  
+I am a Final Year B.Tech Computer Science (Data Science) student at Kazi Nazrul University. I am passionate about bridging the gap between data engineering and full-stack web development. This project serves as a showcase of my ability to build end-to-end automated systems and derive actionable insights from live data.  
+
+Seeking Internships in: Data Science | Web Development | Data Engineering  
