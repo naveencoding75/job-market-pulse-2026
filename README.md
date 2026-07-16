@@ -42,12 +42,12 @@ Go to localhost:3000 to view the local containerized version.
 
 ```
 
-##🚀 Key Insights  
+## 🚀 Key Insights  
 Security is the #1 in-demand skill in the analyzed remote sector.  
 
 Go (Golang) shows higher growth potential than standard Node.js/Express for high-performance roles.  
 
-##🗺️ Future Roadmap  
+## 🗺️ Future Roadmap  
 As a Data Science student, I plan to evolve this project into a more robust market aggregator:  
 
 Multi-Source Aggregation: Integrating JSearch and LinkedIn APIs.  
@@ -56,7 +56,7 @@ NLP Classification: Using Natural Language Processing to categorize job roles ba
 
 Historical Tracking: Migrating to a relational database (MySQL) to store daily snapshots and visualize trends.  
 
-##👨‍💻 About the Developer  
+## 👨‍💻 About the Developer  
 I am a Final Year B.Tech Computer Science (Data Science) student at Kazi Nazrul University. I am passionate about bridging the gap between data engineering and full-stack web development. This project serves as a showcase of my ability to build end-to-end automated systems and derive actionable insights from live data.  
 
 Seeking Internships in: Data Science | Web Development | Data Engineering  
