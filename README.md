@@ -40,6 +40,8 @@ docker run -p 3000:3000 job-market-pulse
 
 Go to localhost:3000 to view the local containerized version.
 
+```
+
 🚀 Key Insights  
 Security is the #1 in-demand skill in the analyzed remote sector.  
 
